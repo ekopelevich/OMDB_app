@@ -3,12 +3,16 @@ var app = angular.module('omdbApp', ['ui.router']);
 app.config(function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
   $stateProvider
+    .state('home', {
+      url: '/',
+      templateUrl: 'partials/home.html'
+    })
     .state('movies', {
-      templateUrl: 'partials/movies.html',
-      controller: 'MoviesController'
+      url: '/movies',
+      templateUrl: 'partials/movies.html'
     })
     .state('cats', {
-      templateUrl: 'partials/cats.html',
-      controller: 'CatsController'
+      url: '/cats',
+      templateUrl: 'partials/cats.html'
     });
   });

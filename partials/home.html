@@ -1,2 +1,17 @@
-<h3>Find a Movie</h3>
-<input type="text" name="search">
+<div ng-controller="MainController">  
+  <h3>Find a Movie</h3>
+  <form name="movieSearchForm" ng-submit="movieSearch()">
+    <input type="text" ng-model="search">
+    <button type="submit" class="btn btn-primary btn-custom">Search</button>
+  </form>
+
+  <div class="movie-list" ng-repeat="movie in movies">
+    <article class="well">
+      <div class="movie-image">
+        <img ng-src="{{ movie.image }}" alt="poster" />
+      </div>
+      <p>{{ movie.title }}</p>
+      <p>{{ movie.year }}</p>
+    </article>
+  </div>
+</div>
