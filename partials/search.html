@@ -1,0 +1,13 @@
+<div ng-controller="MainController">
+
+
+  <div class="movie-list" ng-repeat="movie in movies">
+    <article class="well">
+      <div class="movie-image">
+        <img ng-src="{{ movie.image }}" alt="poster" />
+      </div>
+      <h3>{{ movie.title }}</h3>
+      <p>{{ movie.year }}</p>
+    </article>
+  </div>
+</div>

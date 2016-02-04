@@ -3,13 +3,13 @@ var app = angular.module('omdbApp', ['ui.router']);
 app.config(function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
   $stateProvider
-    .state('home', {
+    .state('search', {
       url: '/',
-      templateUrl: 'partials/home.html'
+      templateUrl: 'partials/search.html'
     })
-    .state('movies', {
+    .state('details', {
       url: '/movies',
-      templateUrl: 'partials/movies.html'
+      templateUrl: 'partials/details.html'
     })
     .state('cats', {
       url: '/cats',
